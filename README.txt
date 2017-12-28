@@ -1,6 +1,11 @@
 ﻿Project code of clustering stochastic processes using covariance-based dissimilarity
 
 
+Prerequisite:  
+To run the fBm simulation code in 'main_simulation_study.m', the user needs to set up FracLab for Matlab. To download FracLab, please refer to:  
+https://project.inria.fr/fraclab/download/  
+
+
 Summary:
 The Matlab codes contained in this repository are based on the research (see Citation) of clustering weakly stationary stochastic processes. This technique is applicable to the unsupervised learning with respect to time series that are weakly stationary.
 
