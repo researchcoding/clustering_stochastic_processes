@@ -1,4 +1,4 @@
-Project code of clustering weakly stationary stochastic processes
+﻿Project code of clustering stochastic processes using covariance-based dissimilarity
 
 
 Summary:
@@ -8,7 +8,7 @@ The Matlab codes contained in this repository are based on the research (see Cit
 Author: Ran Zhao (All rights reserved.)
 
 Content: 
-dist_ts.m: Calculation the distance between two time series by their covariance (or correlation) matrices.
+dist_ts_log.m: Calculation the dissimilarity between two stochastic processes by their covariance (or correlation) matrices, with logarithm transformation applied.
 
 main_simulation_study.m: The main function produces the main conclusions as shown in the simulation studies of cited paper (see citation). The major steps include 1) simulating weakly stationary stochastic processes, 2) constructing offline dataset and performing clustering analysis, and 3) constructing online dataset and performing clustering analysis.
 
@@ -24,4 +24,4 @@ unsup_wssp_online_algo.m: This unsupervised clustering script uses online method
 
 
 Citation:
-Q. Peng, N. Rao and R. Zhao. Unsupervised Clustering of Weakly Stationary Weakly Ergodic Processes using Similarity Measure of Orthogonality. ArXiv, 2017.
+Q. Peng, N. Rao and R. Zhao. Some Thoughts on the Problems of Clustering Stochastic Processes. ArXiv, 2018.

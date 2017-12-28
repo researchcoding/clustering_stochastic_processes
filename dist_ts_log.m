@@ -1,5 +1,6 @@
-function d = dist_ts(A, B, type)
-% DIST_TS: Measure the distance between two time series
+function d = dist_ts_log(A, B, type)
+% DIST_TS_LOG: Measure the dissimilarity between two stochastic processes
+%              based on covariance structures
 %
 % INPUT:
 %   A: [vector] first time series

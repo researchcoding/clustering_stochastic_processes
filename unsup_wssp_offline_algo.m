@@ -40,8 +40,8 @@ function [I, dm] = unsup_wssp_offline_algo(m,m_idx,k,varargin)
             for i = 2:N
                 for j = 1:(i-1)
                     com_obs_ind = m_idx(i,:) & m_idx(j,:);
-                    % covariance matrix based distance measure
-                    dm(i,j) = dist_ts(m(i,com_obs_ind),m(j,com_obs_ind),'cov');
+                    % covariance matrix based dissimilarity measure
+                    dm(i,j) = dist_ts_log(m(i,com_obs_ind),m(j,com_obs_ind),'cov');
                     dm(j,i) = dm(i,j);
                 end
             end

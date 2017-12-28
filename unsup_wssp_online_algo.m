@@ -1,5 +1,5 @@
 function [I,dm]=unsup_wssp_online_algo(m,m_idx,k,varargin)
-% UNSURP_WSSP_ONLINE_ALGO: perform oNline clustering algorithm and with
+% UNSURP_WSSP_ONLINE_ALGO: perform online clustering algorithm and with
 %                          respect to observed times series, with known
 %                          number of clusters
 % 
@@ -44,7 +44,7 @@ function [I,dm]=unsup_wssp_online_algo(m,m_idx,k,varargin)
                 for j = 1:(i-1)
                     com_obs_ind = m_idx(i,:) & m_idx(j,:);
                     % covariance matrix based distance measure
-                    dm(i,j) = dist_ts(m(i,com_obs_ind),m(j,com_obs_ind),'cov');
+                    dm(i,j) = dist_ts_log(m(i,com_obs_ind),m(j,com_obs_ind),'cov');
                     dm(j,i) = dm(i,j);
                 end
             end
