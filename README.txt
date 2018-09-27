@@ -15,13 +15,17 @@ Author: Ran Zhao (All rights reserved.)
 Content: 
 dist_ts_log.m: Calculation the dissimilarity between two stochastic processes by their covariance (or correlation) matrices, with logarithm transformation applied.
 
-main_simulation_study.m: The main function produces the main conclusions as shown in the simulation studies of cited paper (see citation). The major steps include 1) simulating weakly stationary stochastic processes, 2) constructing offline dataset and performing clustering analysis, and 3) constructing online dataset and performing clustering analysis.
+main_simulation_study_fBM.m: The main function produces the main conclusions as shown in the simulation studies of cited paper (see citation). The major steps include 1) simulating weakly stationary stochastic processes, 2) constructing offline dataset and performing clustering analysis, and 3) constructing online dataset and performing clustering analysis.
+
+main_simulation_study_nonGaus.m: Similar to 'main_simulation_study_fBM.m' but uses non-Gaussian process as underlying observations. 
 
 misclassify_rate.m: Calculate the misclassification rate of clustering results. The misclassification rate is defined as the number of mis-clustered observations divided by the total number of observations. 
 
-scale_mean.m: Scaled arbitrate matrix’s rows to specified mean value.
+scale_mean.m: Scaled arbitrate matrix's rows to specified mean value.
 
 sim_wssp_paths.m: The function simulates one example of weakly stationary stochastic process. 
+
+sim_wssp_paths_nonGaus.m: The function simulates one example of non-Gaussian weakly stationary stochastic process. 
 
 unsup_wssp_offline_algo.m: This unsupervised clustering script uses offline methodology (Algorithm 1 in cited paper) to perform clustering analysis. 
 
@@ -29,4 +33,4 @@ unsup_wssp_online_algo.m: This unsupervised clustering script uses online method
 
 
 Citation:
-Q. Peng, N. Rao and R. Zhao. Some Thoughts on the Problems of Clustering Stochastic Processes. ArXiv, 2018.
+Q. Peng, N. Rao and R. Zhao. Covariance-based Dissimilarity Measures Applied to Clustering Wide-sense Stationary Ergodic Processes. ArXiv, 2018.
