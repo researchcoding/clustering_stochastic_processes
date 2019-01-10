@@ -16,8 +16,8 @@ total_num_paths = 100;
 save('fBm.mat')
                      
 %% Offline dataset experiments
-test_time_steps = 100;  
-test_num_sims = 100; 
+test_time_steps = 15;  
+test_num_sims = 5; 
 miscls_rate_offline_algo1 = zeros(test_time_steps, test_num_sims);
 miscls_rate_offline_algo2 = zeros(test_time_steps, test_num_sims);
 avg_miscls_rate_offline_algo1 = zeros(test_time_steps,1);

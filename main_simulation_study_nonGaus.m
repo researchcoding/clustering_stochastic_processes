@@ -4,9 +4,9 @@ rng(2018,'v5uniform')
 % define simulation parameters
 n_clusters = 5;
 obs_num_per_cluster = 10;
-a = 0.5:0.005:0.52;
+a = 0.5:0.01:0.54;
 total_time_steps = 100;
-obs_num_per_step = 3;
+obs_num_per_step = 2;
 total_num_observations = total_time_steps * obs_num_per_step;
 total_num_paths = 100;
 
@@ -16,8 +16,8 @@ total_num_paths = 100;
 save('nonGaus_wssp.mat')
                      
 %% Offline dataset experiments
-test_time_steps = 15;  
-test_num_sims = 5; 
+test_time_steps = 20;  
+test_num_sims = 100; 
 miscls_rate_offline_algo1 = zeros(test_time_steps, test_num_sims);
 miscls_rate_offline_algo2 = zeros(test_time_steps, test_num_sims);
 avg_miscls_rate_offline_algo1 = zeros(test_time_steps,1);
@@ -25,7 +25,7 @@ avg_miscls_rate_offline_algo2 = zeros(test_time_steps,1);
 
 for t = 1:test_time_steps
     % for sim = 1:test_num_sims
-    parfor sim = 1:test_num_sims;  % parallel computing if necessary
+    parfor sim = 1:test_num_sims  % parallel computing if necessary
         
         % scale the obsersed times series to be mean 0
         obs = obs_chain(1:(t * obs_num_per_step), :, sim)';

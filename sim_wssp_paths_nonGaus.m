@@ -49,8 +49,8 @@ for i = 1:num_sim_paths
         % Z(t) = sqrt(2) * cos(tU), where U is random uniform.
         Zt = sqrt(2) * cos(linspace(0, 1, num_points_one_path).* ...
             unifrnd(0, 1, [1, num_points_one_path]));
-        for j = 2:num_points_one_path
-            obs(j, z, i) = a(cluster_ind(z)) * obs(j - 1, z, i) + Zt(j);
+        for j = 3:num_points_one_path
+            obs(j, z, i) = a(cluster_ind(z)) * obs(j - 1, z, i) - a(cluster_ind(z))^2 * obs(j - 2, z, i) + Zt(j);
         end
     end
 end
